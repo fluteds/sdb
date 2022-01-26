@@ -8,10 +8,16 @@ This is a minimal URL shortener database that can be entirely hosted on GitHub p
 
 To add a new link:
 
-- Open an issue **with the title being the link you want to shorten** including the `http(s)://` to [/sdb/issues](https://github.com/fluteds/sdb/issues).
-  - Note: Closed issues also work with this URL shortener.
-- The newly created short url can be accessed via the users default GitHub pages domain or a custom domain (if enabled.)
-  - Note: There is no need to put the pound symbol as the URLs look like this: `website.xyz/s/1` instead of this: `website.xyz/s/#1`.
+- Open an issue with the title being the link you want to shorten, including the `http(s)://` to [/sdb/issues](https://github.com/fluteds/sdb/issues).
+- There is no need to put the pound symbol as the URLs look like this: `website.xyz/s/1` instead of this: `website.xyz/s/#1`.
+
+## Terms
+
+By submitting a link you agree to the following:
+
+- Your URL will be publically available and cannot be deleted unless the repo is deleted.
+- GitHub has a rate limit of 60 searches without auth which affects how many times you can use the service. Check your rate limit by using CURL. `curl -I https://api.github.com/user`
+- Links that go against [GitHub's TOS](https://docs.github.com/en/github/site-policy/github-community-guidelines) are not allowed.
 
 ## ShareX Config
 
