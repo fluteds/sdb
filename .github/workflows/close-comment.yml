@@ -6,7 +6,7 @@ jobs:
   Check:
     runs-on: ubuntu-latest
     steps:
-      - if: startsWith(github.event.issue.title, 'https://') == 'true'
+      - if: contains(github.event.issue.title, 'https://') != 'true'
         uses: peter-evans/close-issue@v1
         with:
           issue-number: ${{ github.event.issue.number }}
