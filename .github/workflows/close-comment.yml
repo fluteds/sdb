@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - if: contains(github.event.issue.title, 'http')
-      - name: Has_URL
+        name: Has_URL
         uses: peter-evans/close-issue@v1
         with:
           issue-number: ${{ github.event.issue.number }}
@@ -17,4 +17,3 @@ jobs:
             **Your URL can be found at: https://dont-ghost.me/${{ github.event.issue.number }}**
             
             Auto-closing this issue.
-  
