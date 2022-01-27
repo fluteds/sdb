@@ -17,15 +17,4 @@ jobs:
             **Your URL can be found at: https://dont-ghost.me/${{ github.event.issue.number }}**
             
             Auto-closing this issue.
-
-      - if: ${{failure()}}
-      - name: No_URL
-        uses: peter-evans/close-issue@v1
-        with:
-          issue-number: ${{ github.event.issue.number }}
-          comment: |
-            No URL found...
-            
-            Please make sure you have added `https://` to the beginning of your issue title.
-
-            Auto-closing this issue.
+  

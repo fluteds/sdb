@@ -1,0 +1,20 @@
+name: Format Issue
+on:
+  issues:
+    types: [opened]
+jobs:
+  Error:
+    needs: Check
+    if: ${{failure()}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: No_URL
+        uses: peter-evans/close-issue@v1
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          comment: |
+            No URL found...
+            
+            Please make sure you have added `https://` to the beginning of your issue title.
+
+            Auto-closing this issue.
